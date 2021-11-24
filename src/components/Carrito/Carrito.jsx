@@ -14,21 +14,21 @@ export const Carrito = () => {
                     <h1>Carrito vacio</h1>
                 :
                     <>
-                        {cartList.map((prod, index) => <Card key={prod[index].id} style={{
+                        {cartList.map((prod) => <Card key={prod.id} style={{
                                 width: '30rem',
                                 display:'block',
                                 marginTop:'100px',
                                 marginRight:'auto',
                                 marginBottom:'0px',
                                 marginLeft:'auto'}}>
-                                <Card.Img variant="top" src={prod[index].imagen} />
+                                <Card.Img variant="top" src={prod.imagen} />
                                 <Card.Body>
-                                    <Card.Title>{prod[index].marca} {prod[index].modelo}</Card.Title>
+                                    <Card.Title>{prod.marca} {prod.modelo}</Card.Title>
                                     <Card.Text>
-                                        Año: {prod[index].año}
+                                        Año: {prod.año}
                                     </Card.Text>
                                     <Card.Text>
-                                        Precio: {prod[index].precio}
+                                        Precio: {prod.precio}
                                     </Card.Text>
                                     <Card.Text>
                                         Cantidad: {prod.cantidad}

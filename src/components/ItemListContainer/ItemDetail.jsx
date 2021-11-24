@@ -20,7 +20,7 @@ const ItemDetail = ({item}) => {
     //  Verifico si se presiono el boton agregar al carrito
     const handleCarrito = (cant) =>{
         setBotonAgregarACarrito(true)
-        agregarCarrito({...item, cantidad:cant})
+        agregarCarrito({...item[0], cantidad:cant})
     }
 
     console.log(cartList)

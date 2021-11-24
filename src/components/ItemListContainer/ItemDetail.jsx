@@ -3,7 +3,7 @@ import ItemCount from "./ItemCount"
 import { useState, useContext} from "react"
 import Button from "@restart/ui/esm/Button"
 import { Link } from "react-router-dom"
-import CartContext from '../../context/CartContext.jsx' 
+import { useCartContext } from "../../context/CartContext.jsx"
 
 //Muestro el item
 const ItemDetail = ({item}) => {
@@ -15,7 +15,7 @@ const ItemDetail = ({item}) => {
     const [botonAgregarACarrito, setBotonAgregarACarrito] = useState(false)
 
     // Traigo el contexto para usar en este componente
-    const {cartList,agregarCarrito} = useContext(CartContext)
+    const {cartList,agregarCarrito} = useCartContext()
 
     //  Verifico si se presiono el boton agregar al carrito
     const handleCarrito = (cant) =>{
